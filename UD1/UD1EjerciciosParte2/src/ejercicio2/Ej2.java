@@ -14,6 +14,11 @@ public class Ej2 {
 		Integer h = min / 60;
 		s = s % 60;
 		
+		if (min == 60) {
+			min = 59;
+			h = h++;
+		}
+		
 		System.out.println("Eso son " + h + " horas(h), " + min + " minutos(min) y " + s + " segundos");
 		
 		sc.close();
