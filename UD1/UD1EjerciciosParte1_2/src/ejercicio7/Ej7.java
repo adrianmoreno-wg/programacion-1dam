@@ -14,6 +14,8 @@ public class Ej7 {
 		
 		Double total = infantil * 15.5 + adulto * 20;
 		
+		total = total >= 100 ? total - total * 0.05 : total;
+		
 		System.out.println("Precio total: " + total + "€");
 		
 		sc.close();

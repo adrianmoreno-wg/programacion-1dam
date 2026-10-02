@@ -1,8 +1,2 @@
-/**
- * 
- */
-/**
- * 
- */
-module UD1Ejercicio2_2 {
+module UD1EjerciciosParte1_2 {
 }
