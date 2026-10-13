@@ -9,10 +9,10 @@ public class Ej5 {
 		System.out.println("Escribe un numero: ");
 		Scanner sc = new Scanner(System.in);
 		Integer N = sc.nextInt();
-		Integer total = N;
+		Integer total = 1;
 		
-		for (Integer i = 0; i < N; i++) {
-			total *= --N;;
+		for (Integer i = 1; i < N; i++) {
+			total *= i;;
 		}
 		
 		System.out.println("Total factorial = " + total);
