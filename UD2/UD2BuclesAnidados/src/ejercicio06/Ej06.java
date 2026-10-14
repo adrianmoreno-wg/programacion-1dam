@@ -14,7 +14,7 @@ public class Ej06 {
 			for (Integer j = 0; j < i; j++) {
 				System.out.print(" ");
 			}
-			for (Integer j = 0; j < N - i; j++) {
+			for (Integer j = 0; j < 2 * (N - i) - 1; j++) {
                 System.out.print("*");
             }
 			System.out.println();
