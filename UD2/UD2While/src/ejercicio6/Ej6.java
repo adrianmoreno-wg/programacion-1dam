@@ -18,6 +18,7 @@ public class Ej6 {
 			if (N >= 0) {
 				if (N > alturaMaxima) {
 					alturaMaxima = N;
+					//lmao
 				}
 			}
 		}
