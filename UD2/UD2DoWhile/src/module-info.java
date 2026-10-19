@@ -1,8 +1,2 @@
-/**
- * 
- */
-/**
- * 
- */
 module UD2DoWhile {
 }
