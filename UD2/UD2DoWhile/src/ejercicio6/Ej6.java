@@ -1,6 +1,6 @@
 package ejercicio6;
 
-// Corregir switch -> Solo pilla valores en mayusculas
+// X --- Corregir switch -> Solo pilla valores en mayusculas
 // No deja finalizar S/N
 
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class Ej6 {
 		Integer j1 = null;
 		String jugador2;
 		Integer j2 = null;
-		String repetir = "Null";
+		String repetir = "null";
 		Boolean finEjecucion = false;
 
 		// Obtener valores del usuario hasta conseguir una de las tres opciones.
@@ -40,26 +40,26 @@ public class Ej6 {
 
 			// Pasar valores String a Integer para compararlos facilmente.
 
-			switch (jugador1) {
-			case "PIEDRA":
+			switch (jugador1.toLowerCase()) {
+			case "piedra":
 				j1 = 0;
 				break;
-			case "PAPEL":
+			case "papel":
 				j1 = 1;
 				break;
-			case "TIJERAS":
+			case "tijeras":
 				j1 = 2;
 				break;
 			}
 
-			switch (jugador2) {
-			case "PIEDRA":
+			switch (jugador2.toLowerCase()) {
+			case "piedra":
 				j2 = 0;
 				break;
-			case "PAPEL":
+			case "papel":
 				j2 = 1;
 				break;
-			case "TIJERAS":
+			case "tijeras":
 				j2 = 2;
 				break;
 			}
@@ -70,14 +70,16 @@ public class Ej6 {
 				System.out.println("¡Jugador 1 ha ganado!");
 				System.out.println("¿Quieres volver a jugar?(S/N)");
 
+				repetir = "null";
+				
 				while (!repetir.equalsIgnoreCase("S") && !repetir.equalsIgnoreCase("N")) {
 					repetir = sc.nextLine();
 
-					switch (repetir) {
-					case "S":
+					switch (repetir.toLowerCase()) {
+					case "s":
 						break;
 
-					case "N":
+					case "n":
 						finEjecucion = true;
 						break;
 
@@ -92,14 +94,16 @@ public class Ej6 {
 				System.out.println("¡Jugador 2 ha ganado!");
 				System.out.println("¿Quieres volver a jugar?(S/N)");
 
+				repetir = "null";
+				
 				while (!repetir.equalsIgnoreCase("S") && !repetir.equalsIgnoreCase("N")) {
 					repetir = sc.nextLine();
 
-					switch (repetir) {
-					case "S":
+					switch (repetir.toLowerCase()) {
+					case "s":
 						break;
 
-					case "N":
+					case "n":
 						finEjecucion = true;
 						break;
 
