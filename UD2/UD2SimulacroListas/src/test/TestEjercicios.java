@@ -1,6 +1,7 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import ejercicios.Ejercicios;
 import utiles.Utiles;
@@ -37,17 +38,28 @@ public class TestEjercicios {
         System.out.println("¿12 es perfecto?   " + Utiles.esPerfecto(12));
         System.out.println("Factorial de 5     " + Utiles.factorial(5));
         System.out.println("Factorial de 0     " + Utiles.factorial(0));
-        //TODO Seguir haciendo las pruebas de los ejercicios
         
+        //TODO Seguir haciendo las pruebas de los ejercicios
         System.out.println("\n--- EJERCICIOS EXAMEN ---");
-        System.out.println("1. ¿Puede entrar?");
+        System.out.println("1. Control de acceso al Baile de los Monstruos");
         System.out.println(Ejercicios.puedeEntrar(16, true, "zombie")); // true
         System.out.println(Ejercicios.puedeEntrar(15, false, "vampiro")); // true
         System.out.println(Ejercicios.puedeEntrar(15, false, "bruja")); //false
         
-        System.out.println("\n2. ¿Cuantos tipos hay?");
-        List<String> lista = List.of("dulce", "ácido", "dulce", "misterioso");
+        System.out.println("\n2. Clasificador de dulces");
+        List<String> lista = Arrays.asList("dulce", "ácido", "dulce", "misterioso", null);
         System.out.println(Ejercicios.cuentaCaramelos(lista, "dulce"));
 
+        List<Integer> recorrido = List.of(2, 3, 4, -1, 5);
+        System.out.println("\n3. Pasos laberinto---");
+        System.out.println(Ejercicios.pasosLaberinto(recorrido)); // 9
+
+        System.out.println("\n4. Promedio magia---");
+        List<Integer> magia = List.of(3, 9, 7, 4, 10);
+        System.out.println(Ejercicios.promedioMagia1(magia)); // 8.67
+        System.out.println(Ejercicios.promedioMagia2(magia)); // 8.67
+        System.out.println(Ejercicios.promedioMagia3(magia)); // 8.67
+        
+        System.out.println();
     }
 }

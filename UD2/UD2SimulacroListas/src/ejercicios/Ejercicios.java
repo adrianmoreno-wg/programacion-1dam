@@ -126,24 +126,67 @@ public class Ejercicios {
 
 	// Ejercicio 2 — Clasificador de caramelos
 	public static Integer cuentaCaramelos(List<String> caramelos, String tipo) {
-		// return (int) caramelos.stream().filter(e -> e.equals(tipo)).count();
-		Integer count = 0;
-		for (String c : caramelos) {
-			if (c.equals(tipo)) {
-				count++;
+		return (int) caramelos.stream().filter(Objects::nonNull).filter(e -> e.equals(tipo)).count();
+	}
+
+	// Ejercicio 3 — Contador de pasos en el Laberinto
+	public static Integer pasosLaberinto(List<Integer> pasos) {
+		return pasos.stream().takeWhile(e -> e > 0).reduce(0, (a, b) -> a + b);
+	}
+
+	// Ejercicio 4 — Nivel medio de magia en las calabazas
+	public static Double promedioMagia1(List<Integer> niveles) {
+		Integer numMayores = 0;
+		Double sum = 0.;
+		
+		for (Integer nivel : niveles) {
+			if (nivel >= 5) {
+				sum += nivel;
+				numMayores++;
 			}
 		}
-		return count;
-//		Integer count = 0;
-//		for (int i = 0; i < caramelos.size(); i++) {
-//			String c = caramelos.get(i);
-//			if (!Objects.nonNull(count)) {
-//				continue;
-//			}
-//			if (caramelos.get(i).equals(tipo)) {
-//				count++;
-//			}
-//		}
-//		return count;
+
+		return sum / numMayores;
+	}
+
+	public static Double promedioMagia2(List<Integer> niveles) {
+		Integer numMayores = 0;
+		Double sum = 0.;
+		
+		for (int i = 0; i < niveles.size(); i++) {
+			if (niveles.get(i) >= 5) {
+				sum += niveles.get(i);
+				numMayores++;
+			}
+		}
+
+		return sum / numMayores;
+	}
+
+	public static Double promedioMagia3(List<Integer> niveles) {
+		Integer numMayores = 0;
+		Double sum = 0.;
+		
+		Integer i = 0;
+		while (i < niveles.size()) {
+			if (niveles.get(i) >= 5) {
+				sum += niveles.get(i);
+				numMayores++;
+			}
+			 i++;
+		}
+		return sum / numMayores;
+	}
+	
+	// Ejercicio 5 — Recursividad: Cuenta Atrás de Sustos
+	public static void cuentaAtrasSusto(Integer n) {
+		Integer i = n;	
+		if (i != 0) {
+				System.out.println("Boo " + i);
+				cuentaAtrasSusto(i - 1);
+			} else {
+				System.out.println("¡Susto final!");
+		}
+		
 	}
 }
