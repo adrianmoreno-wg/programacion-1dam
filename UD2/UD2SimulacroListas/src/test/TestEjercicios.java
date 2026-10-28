@@ -51,15 +51,20 @@ public class TestEjercicios {
         System.out.println(Ejercicios.cuentaCaramelos(lista, "dulce"));
 
         List<Integer> recorrido = List.of(2, 3, 4, -1, 5);
-        System.out.println("\n3. Pasos laberinto---");
+        System.out.println("\n3. Pasos laberinto");
         System.out.println(Ejercicios.pasosLaberinto(recorrido)); // 9
 
-        System.out.println("\n4. Promedio magia---");
+        System.out.println("\n4. Promedio magia");
         List<Integer> magia = List.of(3, 9, 7, 4, 10);
         System.out.println(Ejercicios.promedioMagia1(magia)); // 8.67
         System.out.println(Ejercicios.promedioMagia2(magia)); // 8.67
         System.out.println(Ejercicios.promedioMagia3(magia)); // 8.67
         
-        System.out.println();
+        System.out.println("\n5. Cuenta atras sustos");
+        Ejercicios.cuentaAtrasSusto(4);
+        
+        System.out.println("\n6. Suma entre ceros");
+        List<Integer> numeros2 = List.of(3, 9, 0, 4, 10, 0, -3, 5);
+        System.out.println(Ejercicios.sumaEntreCeros(numeros2)); // 4+10 = 14
     }
 }

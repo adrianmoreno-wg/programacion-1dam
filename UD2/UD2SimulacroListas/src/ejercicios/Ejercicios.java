@@ -138,7 +138,7 @@ public class Ejercicios {
 	public static Double promedioMagia1(List<Integer> niveles) {
 		Integer numMayores = 0;
 		Double sum = 0.;
-		
+
 		for (Integer nivel : niveles) {
 			if (nivel >= 5) {
 				sum += nivel;
@@ -152,7 +152,7 @@ public class Ejercicios {
 	public static Double promedioMagia2(List<Integer> niveles) {
 		Integer numMayores = 0;
 		Double sum = 0.;
-		
+
 		for (int i = 0; i < niveles.size(); i++) {
 			if (niveles.get(i) >= 5) {
 				sum += niveles.get(i);
@@ -166,27 +166,43 @@ public class Ejercicios {
 	public static Double promedioMagia3(List<Integer> niveles) {
 		Integer numMayores = 0;
 		Double sum = 0.;
-		
+
 		Integer i = 0;
 		while (i < niveles.size()) {
 			if (niveles.get(i) >= 5) {
 				sum += niveles.get(i);
 				numMayores++;
 			}
-			 i++;
+			i++;
 		}
 		return sum / numMayores;
 	}
-	
+
 	// Ejercicio 5 — Recursividad: Cuenta Atrás de Sustos
 	public static void cuentaAtrasSusto(Integer n) {
-		Integer i = n;	
-		if (i != 0) {
-				System.out.println("Boo " + i);
-				cuentaAtrasSusto(i - 1);
-			} else {
-				System.out.println("¡Susto final!");
+		Integer i = n;
+		if (n == null) {
+
+		} else if (i > 0) {
+			System.out.println("Boo " + i);
+			cuentaAtrasSusto(i - 1);
+		} else {
+			System.out.println("¡Susto final!");
 		}
-		
+	}
+
+	// Ejercicio 6 — La suma entre los dos ceros
+	public static Integer sumaEntreCeros(List<Integer> numeros) {
+		Integer contadorCeros = 0;
+		Integer suma = 0;
+		for (Integer i : numeros) {
+			if (i == 0) {
+				contadorCeros++;
+			}
+			if (contadorCeros == 1) {
+				suma += i;
+			}
+		}
+		return suma;
 	}
 }
