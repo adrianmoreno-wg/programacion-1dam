@@ -6,16 +6,11 @@ public class Ajedrez {
 	// 8x8
 	// Fichas restantes: peon, caballo, rey
 
-	public static void main(String[] args) {
-
-		peon(7, 2, true);
-	}
-
 	private static void peon(Integer columna, Integer fila, Boolean esBlanca) {
 		if (esBlanca) {
 			for (Integer i = 1; i <= 8; i++) {
 				for (Integer j = 1; j <= 8; j++) {
-					if (columna == 7 && j == fila  && (i == 6 || i == 5)) {
+					if (columna == 7 && j == fila && (i == 6 || i == 5)) {
 						System.out.print("X");
 					} else if (i == columna - 1 && j == fila) {
 						System.out.print("X");
