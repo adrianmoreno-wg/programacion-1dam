@@ -8,7 +8,7 @@ public class Oferta3x2Test {
 
 	public static void main(String[] args) {
 //		Entradas y salidas:
-//			40, 35, 30, 25, 20, 15, 10 --> 45
+//			40, 35, 30, 25, 20, 15, 10 --> 25
 //		
 //			50, 10, 30 ------------------> 10
 //		
@@ -19,8 +19,8 @@ public class Oferta3x2Test {
 		List<Integer> precios3 = List.of(25, 20);
 		
 		System.out.println(Oferta3x2.oferta(precios1));
-//		System.out.println(Oferta3x2.oferta(precios2));
-//		System.out.println(Oferta3x2.oferta(precios3));
+		System.out.println(Oferta3x2.oferta(precios2));
+		System.out.println(Oferta3x2.oferta(precios3));
 	}
 
 }

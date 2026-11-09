@@ -1,5 +1,6 @@
 package oferta3x2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Oferta3x2 {
@@ -25,21 +26,19 @@ public class Oferta3x2 {
 
 		Integer n = precio.size() / 3;
 		Integer descuento = 0;
-		Integer valorLista = null;
+		List<Integer> valores = new ArrayList<>(precio);
 		
 		for (Integer i = 0; i < n; i++) {
-			Integer m = 0;
-			Integer valorMinimo = 100000;
+			Integer valorMinimo = Integer.MAX_VALUE;
 			
-			for (Integer j : precio) {
+			for (Integer j : valores) {
 				if (valorMinimo > j) { 
 						valorMinimo = j;
-						valorLista = precio.indexOf(m);
 				}
-				m++;
 			}
+			
 			descuento += valorMinimo;
-			precio.remove(valorLista);
+			valores.remove(valorMinimo);
 		}
 		
 		return descuento;
